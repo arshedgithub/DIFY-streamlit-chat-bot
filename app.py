@@ -1,6 +1,10 @@
+import os
 import requests
 import streamlit as st
-dify_api_key = "xxx"
+from dotenv import load_dotenv
+
+load_dotenv()
+dify_api_key = os.getenv("DIFY_API_KEY")
 url = "https://api.dify.ai/v1/chat-messages"
 
 st.title("Dify Chatbot")
